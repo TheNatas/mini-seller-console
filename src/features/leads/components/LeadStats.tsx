@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeadStats as LeadStatsType } from "../types/lead";
+import type { LeadStats as LeadStatsType } from "../types/lead";
 
 interface LeadStatsProps {
   stats: LeadStatsType;

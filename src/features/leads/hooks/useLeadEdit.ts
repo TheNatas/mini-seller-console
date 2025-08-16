@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import type { Lead, LeadStatus } from '../types/lead';
+import type { Lead } from '../types/lead';
 
 interface UseLeadEditProps {
   lead: Lead;

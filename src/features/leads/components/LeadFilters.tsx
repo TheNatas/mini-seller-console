@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeadFilters as LeadFiltersType, LeadStatus } from "../types/lead";
+import type { LeadFilters as LeadFiltersType, LeadStatus } from "../types/lead";
 import { Input } from "../../../components/ui/Input";
 import { Select } from "../../../components/ui/Select";
 import { Button } from "../../../components/ui/Button";

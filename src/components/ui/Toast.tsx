@@ -28,7 +28,7 @@ export const Toast: React.FC<ToastProps> = ({
 
   if (!isVisible) return null;
 
-  const icon = type === 'success' ? CheckCircleIcon : XCircleIcon;
+  const IconComponent = type === 'success' ? CheckCircleIcon : XCircleIcon;
   const bgColor = type === 'success' ? 'bg-green-50' : 'bg-red-50';
   const borderColor = type === 'success' ? 'border-green-200' : 'border-red-200';
   const textColor = type === 'success' ? 'text-green-800' : 'text-red-800';
@@ -39,7 +39,7 @@ export const Toast: React.FC<ToastProps> = ({
       <div className="p-4">
         <div className="flex items-start">
           <div className="flex-shrink-0">
-            <icon className={`h-5 w-5 ${iconColor}`} aria-hidden="true" />
+            <IconComponent className={`h-5 w-5 ${iconColor}`} aria-hidden="true" />
           </div>
           <div className="ml-3 flex-1">
             <p className={`text-sm font-medium ${textColor}`}>{message}</p>

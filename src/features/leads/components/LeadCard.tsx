@@ -1,6 +1,6 @@
 import React from 'react';
-import { Lead } from '../../types/lead';
-import { Badge } from '../ui/Badge';
+import type { Lead } from '../types/lead';
+import { Badge } from '../../../components/ui/Badge';
 
 interface LeadCardProps {
   lead: Lead;

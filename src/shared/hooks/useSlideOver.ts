@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import type { Lead } from '../types/lead';
+import type { Lead } from '../../features/leads/types/lead';
 
 export const useSlideOver = () => {
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null);

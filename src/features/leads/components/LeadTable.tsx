@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lead } from "../types/lead";
+import type { Lead } from "../types/lead";
 import { Badge } from "../../../components/ui/Badge";
 
 interface LeadTableProps {

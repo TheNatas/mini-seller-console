@@ -1,5 +1,5 @@
 import React from 'react';
-import { LeadStatus } from '../../types/lead';
+import type { LeadStatus } from '../../features/leads/types/lead';
 
 interface BadgeProps {
   status: LeadStatus;
