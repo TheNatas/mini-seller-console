@@ -1,0 +1,902 @@
+[
+  {
+    "id": 1,
+    "name": "Uma Young",
+    "company": "Skyline Ventures",
+    "email": "uma.young@skylineventures.com",
+    "source": "LinkedIn",
+    "score": 52,
+    "status": "Contacted"
+  },
+  {
+    "id": 2,
+    "name": "Zane Adams",
+    "company": "OptimaTech",
+    "email": "zane.adams@optimatech.com",
+    "source": "Conference",
+    "score": 52,
+    "status": "New"
+  },
+  {
+    "id": 3,
+    "name": "Rachel Johnson",
+    "company": "Visionary Ltd",
+    "email": "rachel.johnson@visionaryltd.com",
+    "source": "Referral",
+    "score": 61,
+    "status": "Qualified"
+  },
+  {
+    "id": 4,
+    "name": "Xavier Martinez",
+    "company": "CoreSolutions",
+    "email": "xavier.martinez@coresolutions.com",
+    "source": "Website",
+    "score": 74,
+    "status": "Qualified"
+  },
+  {
+    "id": 5,
+    "name": "Zane Davis",
+    "company": "IntelliCore",
+    "email": "zane.davis@intellicore.com",
+    "source": "Referral",
+    "score": 99,
+    "status": "Lost"
+  },
+  {
+    "id": 6,
+    "name": "Uma Baker",
+    "company": "QuantumSoft",
+    "email": "uma.baker@quantumsoft.com",
+    "source": "Email Campaign",
+    "score": 95,
+    "status": "Contacted"
+  },
+  {
+    "id": 7,
+    "name": "Frank Baker",
+    "company": "NextGen Labs",
+    "email": "frank.baker@nextgenlabs.com",
+    "source": "Conference",
+    "score": 79,
+    "status": "New"
+  },
+  {
+    "id": 8,
+    "name": "Xavier Young",
+    "company": "BlueOcean",
+    "email": "xavier.young@blueocean.com",
+    "source": "Conference",
+    "score": 99,
+    "status": "Contacted"
+  },
+  {
+    "id": 9,
+    "name": "Rachel Smith",
+    "company": "FutureWorks",
+    "email": "rachel.smith@futureworks.com",
+    "source": "Email Campaign",
+    "score": 80,
+    "status": "Qualified"
+  },
+  {
+    "id": 10,
+    "name": "Grace Green",
+    "company": "BrightPath",
+    "email": "grace.green@brightpath.com",
+    "source": "Conference",
+    "score": 70,
+    "status": "Lost"
+  },
+  {
+    "id": 11,
+    "name": "Isabella Davis",
+    "company": "GrowthPoint",
+    "email": "isabella.davis@growthpoint.com",
+    "source": "Website",
+    "score": 54,
+    "status": "Qualified"
+  },
+  {
+    "id": 12,
+    "name": "Victor Wright",
+    "company": "AgileX",
+    "email": "victor.wright@agilex.com",
+    "source": "Referral",
+    "score": 57,
+    "status": "New"
+  },
+  {
+    "id": 13,
+    "name": "Olivia Lee",
+    "company": "CloudSphere",
+    "email": "olivia.lee@cloudsphere.com",
+    "source": "Website",
+    "score": 95,
+    "status": "Contacted"
+  },
+  {
+    "id": 14,
+    "name": "Jack Martinez",
+    "company": "InnovaCorp",
+    "email": "jack.martinez@innovacorp.com",
+    "source": "Email Campaign",
+    "score": 95,
+    "status": "Lost"
+  },
+  {
+    "id": 15,
+    "name": "Daniel Harris",
+    "company": "GreenCore",
+    "email": "daniel.harris@greencore.com",
+    "source": "Conference",
+    "score": 53,
+    "status": "New"
+  },
+  {
+    "id": 16,
+    "name": "Victor Thompson",
+    "company": "DataForge",
+    "email": "victor.thompson@dataforge.com",
+    "source": "LinkedIn",
+    "score": 80,
+    "status": "Qualified"
+  },
+  {
+    "id": 17,
+    "name": "Wendy Davis",
+    "company": "GreenCore",
+    "email": "wendy.davis@greencore.com",
+    "source": "Email Campaign",
+    "score": 70,
+    "status": "Lost"
+  },
+  {
+    "id": 18,
+    "name": "Wendy Harris",
+    "company": "Visionary Ltd",
+    "email": "wendy.harris@visionaryltd.com",
+    "source": "LinkedIn",
+    "score": 57,
+    "status": "Lost"
+  },
+  {
+    "id": 19,
+    "name": "Victor Davis",
+    "company": "BlueOcean",
+    "email": "victor.davis@blueocean.com",
+    "source": "Referral",
+    "score": 74,
+    "status": "Lost"
+  },
+  {
+    "id": 20,
+    "name": "Olivia Wright",
+    "company": "CoreSolutions",
+    "email": "olivia.wright@coresolutions.com",
+    "source": "Email Campaign",
+    "score": 50,
+    "status": "Contacted"
+  },
+  {
+    "id": 21,
+    "name": "Zane Adams",
+    "company": "HyperNet",
+    "email": "zane.adams@hypernet.com",
+    "source": "Email Campaign",
+    "score": 53,
+    "status": "New"
+  },
+  {
+    "id": 22,
+    "name": "Frank Garcia",
+    "company": "GrowthPoint",
+    "email": "frank.garcia@growthpoint.com",
+    "source": "Email Campaign",
+    "score": 91,
+    "status": "Qualified"
+  },
+  {
+    "id": 23,
+    "name": "Karen Lee",
+    "company": "GrowthPoint",
+    "email": "karen.lee@growthpoint.com",
+    "source": "Referral",
+    "score": 81,
+    "status": "Lost"
+  },
+  {
+    "id": 24,
+    "name": "Zane Johnson",
+    "company": "IntelliCore",
+    "email": "zane.johnson@intellicore.com",
+    "source": "Conference",
+    "score": 75,
+    "status": "Lost"
+  },
+  {
+    "id": 25,
+    "name": "Frank White",
+    "company": "DataForge",
+    "email": "frank.white@dataforge.com",
+    "source": "Conference",
+    "score": 49,
+    "status": "Lost"
+  },
+  {
+    "id": 26,
+    "name": "Mia Baker",
+    "company": "AgileX",
+    "email": "mia.baker@agilex.com",
+    "source": "LinkedIn",
+    "score": 91,
+    "status": "New"
+  },
+  {
+    "id": 27,
+    "name": "Emily Davis",
+    "company": "DataForge",
+    "email": "emily.davis@dataforge.com",
+    "source": "Conference",
+    "score": 65,
+    "status": "Contacted"
+  },
+  {
+    "id": 28,
+    "name": "Uma Johnson",
+    "company": "GreenCore",
+    "email": "uma.johnson@greencore.com",
+    "source": "Email Campaign",
+    "score": 49,
+    "status": "Lost"
+  },
+  {
+    "id": 29,
+    "name": "Brian Young",
+    "company": "EcoLogic",
+    "email": "brian.young@ecologic.com",
+    "source": "Website",
+    "score": 69,
+    "status": "New"
+  },
+  {
+    "id": 30,
+    "name": "Wendy Wilson",
+    "company": "Skyline Ventures",
+    "email": "wendy.wilson@skylineventures.com",
+    "source": "Conference",
+    "score": 44,
+    "status": "Lost"
+  },
+  {
+    "id": 31,
+    "name": "Henry Harris",
+    "company": "NextGen Labs",
+    "email": "henry.harris@nextgenlabs.com",
+    "source": "Website",
+    "score": 78,
+    "status": "New"
+  },
+  {
+    "id": 32,
+    "name": "Jack Green",
+    "company": "QuantumSoft",
+    "email": "jack.green@quantumsoft.com",
+    "source": "LinkedIn",
+    "score": 49,
+    "status": "Lost"
+  },
+  {
+    "id": 33,
+    "name": "Yara Johnson",
+    "company": "HyperNet",
+    "email": "yara.johnson@hypernet.com",
+    "source": "Email Campaign",
+    "score": 74,
+    "status": "Qualified"
+  },
+  {
+    "id": 34,
+    "name": "Karen Johnson",
+    "company": "CoreSolutions",
+    "email": "karen.johnson@coresolutions.com",
+    "source": "Conference",
+    "score": 60,
+    "status": "Contacted"
+  },
+  {
+    "id": 35,
+    "name": "Zane King",
+    "company": "CloudSphere",
+    "email": "zane.king@cloudsphere.com",
+    "source": "LinkedIn",
+    "score": 56,
+    "status": "Qualified"
+  },
+  {
+    "id": 36,
+    "name": "Olivia Green",
+    "company": "CoreSolutions",
+    "email": "olivia.green@coresolutions.com",
+    "source": "Email Campaign",
+    "score": 82,
+    "status": "Qualified"
+  },
+  {
+    "id": 37,
+    "name": "Frank Thompson",
+    "company": "CloudSphere",
+    "email": "frank.thompson@cloudsphere.com",
+    "source": "Conference",
+    "score": 45,
+    "status": "New"
+  },
+  {
+    "id": 38,
+    "name": "Grace Adams",
+    "company": "DataForge",
+    "email": "grace.adams@dataforge.com",
+    "source": "LinkedIn",
+    "score": 84,
+    "status": "New"
+  },
+  {
+    "id": 39,
+    "name": "Henry Adams",
+    "company": "InnovaCorp",
+    "email": "henry.adams@innovacorp.com",
+    "source": "Website",
+    "score": 64,
+    "status": "Contacted"
+  },
+  {
+    "id": 40,
+    "name": "Xavier Green",
+    "company": "OptimaTech",
+    "email": "xavier.green@optimatech.com",
+    "source": "Conference",
+    "score": 89,
+    "status": "Contacted"
+  },
+  {
+    "id": 41,
+    "name": "Grace Thompson",
+    "company": "IntelliCore",
+    "email": "grace.thompson@intellicore.com",
+    "source": "Email Campaign",
+    "score": 72,
+    "status": "Lost"
+  },
+  {
+    "id": 42,
+    "name": "Rachel Clark",
+    "company": "EcoLogic",
+    "email": "rachel.clark@ecologic.com",
+    "source": "LinkedIn",
+    "score": 67,
+    "status": "New"
+  },
+  {
+    "id": 43,
+    "name": "Zane Adams",
+    "company": "DataForge",
+    "email": "zane.adams@dataforge.com",
+    "source": "Conference",
+    "score": 52,
+    "status": "Qualified"
+  },
+  {
+    "id": 44,
+    "name": "Daniel Adams",
+    "company": "InnovaCorp",
+    "email": "daniel.adams@innovacorp.com",
+    "source": "Email Campaign",
+    "score": 76,
+    "status": "New"
+  },
+  {
+    "id": 45,
+    "name": "Emily Johnson",
+    "company": "CloudSphere",
+    "email": "emily.johnson@cloudsphere.com",
+    "source": "Website",
+    "score": 97,
+    "status": "New"
+  },
+  {
+    "id": 46,
+    "name": "Leo Lee",
+    "company": "BrightPath",
+    "email": "leo.lee@brightpath.com",
+    "source": "Referral",
+    "score": 99,
+    "status": "New"
+  },
+  {
+    "id": 47,
+    "name": "Samuel Green",
+    "company": "NextGen Labs",
+    "email": "samuel.green@nextgenlabs.com",
+    "source": "Email Campaign",
+    "score": 84,
+    "status": "Contacted"
+  },
+  {
+    "id": 48,
+    "name": "Frank Thompson",
+    "company": "InnovaCorp",
+    "email": "frank.thompson@innovacorp.com",
+    "source": "LinkedIn",
+    "score": 100,
+    "status": "Lost"
+  },
+  {
+    "id": 49,
+    "name": "Xavier Allen",
+    "company": "IntelliCore",
+    "email": "xavier.allen@intellicore.com",
+    "source": "LinkedIn",
+    "score": 47,
+    "status": "Contacted"
+  },
+  {
+    "id": 50,
+    "name": "Catherine King",
+    "company": "IntelliCore",
+    "email": "catherine.king@intellicore.com",
+    "source": "Website",
+    "score": 90,
+    "status": "Lost"
+  },
+  {
+    "id": 51,
+    "name": "Samuel Garcia",
+    "company": "FutureWorks",
+    "email": "samuel.garcia@futureworks.com",
+    "source": "Referral",
+    "score": 67,
+    "status": "Lost"
+  },
+  {
+    "id": 52,
+    "name": "Yara Scott",
+    "company": "FutureWorks",
+    "email": "yara.scott@futureworks.com",
+    "source": "Email Campaign",
+    "score": 47,
+    "status": "Lost"
+  },
+  {
+    "id": 53,
+    "name": "Henry White",
+    "company": "InnovaCorp",
+    "email": "henry.white@innovacorp.com",
+    "source": "Website",
+    "score": 83,
+    "status": "New"
+  },
+  {
+    "id": 54,
+    "name": "Karen Davis",
+    "company": "CoreSolutions",
+    "email": "karen.davis@coresolutions.com",
+    "source": "Referral",
+    "score": 78,
+    "status": "Lost"
+  },
+  {
+    "id": 55,
+    "name": "Leo Clark",
+    "company": "CloudSphere",
+    "email": "leo.clark@cloudsphere.com",
+    "source": "Referral",
+    "score": 68,
+    "status": "Qualified"
+  },
+  {
+    "id": 56,
+    "name": "Yara Wilson",
+    "company": "Visionary Ltd",
+    "email": "yara.wilson@visionaryltd.com",
+    "source": "Email Campaign",
+    "score": 92,
+    "status": "New"
+  },
+  {
+    "id": 57,
+    "name": "Brian Baker",
+    "company": "IntelliCore",
+    "email": "brian.baker@intellicore.com",
+    "source": "Referral",
+    "score": 60,
+    "status": "Lost"
+  },
+  {
+    "id": 58,
+    "name": "Daniel Thompson",
+    "company": "InnovaCorp",
+    "email": "daniel.thompson@innovacorp.com",
+    "source": "Referral",
+    "score": 47,
+    "status": "Lost"
+  },
+  {
+    "id": 59,
+    "name": "Henry Scott",
+    "company": "CoreSolutions",
+    "email": "henry.scott@coresolutions.com",
+    "source": "Referral",
+    "score": 93,
+    "status": "Qualified"
+  },
+  {
+    "id": 60,
+    "name": "Emily Davis",
+    "company": "FutureWorks",
+    "email": "emily.davis@futureworks.com",
+    "source": "Conference",
+    "score": 74,
+    "status": "Lost"
+  },
+  {
+    "id": 61,
+    "name": "Jack Clark",
+    "company": "TechNova",
+    "email": "jack.clark@technova.com",
+    "source": "Referral",
+    "score": 82,
+    "status": "Qualified"
+  },
+  {
+    "id": 62,
+    "name": "Paul Hall",
+    "company": "FutureWorks",
+    "email": "paul.hall@futureworks.com",
+    "source": "Email Campaign",
+    "score": 96,
+    "status": "Contacted"
+  },
+  {
+    "id": 63,
+    "name": "Alice Lee",
+    "company": "InnovaCorp",
+    "email": "alice.lee@innovacorp.com",
+    "source": "Referral",
+    "score": 50,
+    "status": "New"
+  },
+  {
+    "id": 64,
+    "name": "Samuel King",
+    "company": "HyperNet",
+    "email": "samuel.king@hypernet.com",
+    "source": "Email Campaign",
+    "score": 40,
+    "status": "Lost"
+  },
+  {
+    "id": 65,
+    "name": "Grace Clark",
+    "company": "FutureWorks",
+    "email": "grace.clark@futureworks.com",
+    "source": "Email Campaign",
+    "score": 94,
+    "status": "New"
+  },
+  {
+    "id": 66,
+    "name": "Henry Martinez",
+    "company": "IntelliCore",
+    "email": "henry.martinez@intellicore.com",
+    "source": "Referral",
+    "score": 72,
+    "status": "Contacted"
+  },
+  {
+    "id": 67,
+    "name": "Yara Scott",
+    "company": "AgileX",
+    "email": "yara.scott@agilex.com",
+    "source": "LinkedIn",
+    "score": 67,
+    "status": "Qualified"
+  },
+  {
+    "id": 68,
+    "name": "Brian Wright",
+    "company": "InnovaCorp",
+    "email": "brian.wright@innovacorp.com",
+    "source": "Website",
+    "score": 85,
+    "status": "Contacted"
+  },
+  {
+    "id": 69,
+    "name": "Isabella Wright",
+    "company": "NextGen Labs",
+    "email": "isabella.wright@nextgenlabs.com",
+    "source": "Email Campaign",
+    "score": 87,
+    "status": "Lost"
+  },
+  {
+    "id": 70,
+    "name": "Zane Green",
+    "company": "NextGen Labs",
+    "email": "zane.green@nextgenlabs.com",
+    "source": "Email Campaign",
+    "score": 74,
+    "status": "Contacted"
+  },
+  {
+    "id": 71,
+    "name": "Paul Allen",
+    "company": "Skyline Ventures",
+    "email": "paul.allen@skylineventures.com",
+    "source": "Referral",
+    "score": 93,
+    "status": "Qualified"
+  },
+  {
+    "id": 72,
+    "name": "Grace Wright",
+    "company": "NextGen Labs",
+    "email": "grace.wright@nextgenlabs.com",
+    "source": "Conference",
+    "score": 70,
+    "status": "Contacted"
+  },
+  {
+    "id": 73,
+    "name": "Grace Adams",
+    "company": "NextGen Labs",
+    "email": "grace.adams@nextgenlabs.com",
+    "source": "LinkedIn",
+    "score": 63,
+    "status": "Contacted"
+  },
+  {
+    "id": 74,
+    "name": "Olivia Johnson",
+    "company": "FutureWorks",
+    "email": "olivia.johnson@futureworks.com",
+    "source": "Website",
+    "score": 95,
+    "status": "New"
+  },
+  {
+    "id": 75,
+    "name": "Paul Allen",
+    "company": "CloudSphere",
+    "email": "paul.allen@cloudsphere.com",
+    "source": "Website",
+    "score": 92,
+    "status": "Qualified"
+  },
+  {
+    "id": 76,
+    "name": "Karen Davis",
+    "company": "QuantumSoft",
+    "email": "karen.davis@quantumsoft.com",
+    "source": "Website",
+    "score": 85,
+    "status": "Lost"
+  },
+  {
+    "id": 77,
+    "name": "Noah Smith",
+    "company": "GrowthPoint",
+    "email": "noah.smith@growthpoint.com",
+    "source": "Conference",
+    "score": 69,
+    "status": "Contacted"
+  },
+  {
+    "id": 78,
+    "name": "Brian Green",
+    "company": "TechNova",
+    "email": "brian.green@technova.com",
+    "source": "Conference",
+    "score": 94,
+    "status": "New"
+  },
+  {
+    "id": 79,
+    "name": "Emily White",
+    "company": "BlueOcean",
+    "email": "emily.white@blueocean.com",
+    "source": "LinkedIn",
+    "score": 93,
+    "status": "Lost"
+  },
+  {
+    "id": 80,
+    "name": "Xavier Harris",
+    "company": "DataForge",
+    "email": "xavier.harris@dataforge.com",
+    "source": "Website",
+    "score": 77,
+    "status": "Contacted"
+  },
+  {
+    "id": 81,
+    "name": "Victor Scott",
+    "company": "EcoLogic",
+    "email": "victor.scott@ecologic.com",
+    "source": "Website",
+    "score": 50,
+    "status": "Contacted"
+  },
+  {
+    "id": 82,
+    "name": "Paul Green",
+    "company": "NextGen Labs",
+    "email": "paul.green@nextgenlabs.com",
+    "source": "Email Campaign",
+    "score": 48,
+    "status": "Contacted"
+  },
+  {
+    "id": 83,
+    "name": "Rachel Wright",
+    "company": "BrightPath",
+    "email": "rachel.wright@brightpath.com",
+    "source": "Website",
+    "score": 53,
+    "status": "Contacted"
+  },
+  {
+    "id": 84,
+    "name": "Zane Wilson",
+    "company": "IntelliCore",
+    "email": "zane.wilson@intellicore.com",
+    "source": "Conference",
+    "score": 59,
+    "status": "Lost"
+  },
+  {
+    "id": 85,
+    "name": "Isabella Johnson",
+    "company": "EcoLogic",
+    "email": "isabella.johnson@ecologic.com",
+    "source": "Website",
+    "score": 92,
+    "status": "New"
+  },
+  {
+    "id": 86,
+    "name": "Grace White",
+    "company": "BlueOcean",
+    "email": "grace.white@blueocean.com",
+    "source": "Referral",
+    "score": 53,
+    "status": "Qualified"
+  },
+  {
+    "id": 87,
+    "name": "Wendy Martinez",
+    "company": "FusionWare",
+    "email": "wendy.martinez@fusionware.com",
+    "source": "Conference",
+    "score": 72,
+    "status": "Contacted"
+  },
+  {
+    "id": 88,
+    "name": "Tina Baker",
+    "company": "CoreSolutions",
+    "email": "tina.baker@coresolutions.com",
+    "source": "LinkedIn",
+    "score": 81,
+    "status": "Qualified"
+  },
+  {
+    "id": 89,
+    "name": "Frank Davis",
+    "company": "Skyline Ventures",
+    "email": "frank.davis@skylineventures.com",
+    "source": "Email Campaign",
+    "score": 97,
+    "status": "Lost"
+  },
+  {
+    "id": 90,
+    "name": "Quinn Harris",
+    "company": "NextGen Labs",
+    "email": "quinn.harris@nextgenlabs.com",
+    "source": "Email Campaign",
+    "score": 49,
+    "status": "Qualified"
+  },
+  {
+    "id": 91,
+    "name": "Zane Wright",
+    "company": "Visionary Ltd",
+    "email": "zane.wright@visionaryltd.com",
+    "source": "Website",
+    "score": 44,
+    "status": "Qualified"
+  },
+  {
+    "id": 92,
+    "name": "Mia Green",
+    "company": "CoreSolutions",
+    "email": "mia.green@coresolutions.com",
+    "source": "Email Campaign",
+    "score": 69,
+    "status": "Qualified"
+  },
+  {
+    "id": 93,
+    "name": "Xavier Harris",
+    "company": "BrightPath",
+    "email": "xavier.harris@brightpath.com",
+    "source": "LinkedIn",
+    "score": 68,
+    "status": "Lost"
+  },
+  {
+    "id": 94,
+    "name": "Emily Green",
+    "company": "CoreSolutions",
+    "email": "emily.green@coresolutions.com",
+    "source": "Referral",
+    "score": 61,
+    "status": "Contacted"
+  },
+  {
+    "id": 95,
+    "name": "Wendy Adams",
+    "company": "BlueOcean",
+    "email": "wendy.adams@blueocean.com",
+    "source": "LinkedIn",
+    "score": 93,
+    "status": "New"
+  },
+  {
+    "id": 96,
+    "name": "Yara Baker",
+    "company": "DataForge",
+    "email": "yara.baker@dataforge.com",
+    "source": "Website",
+    "score": 93,
+    "status": "Qualified"
+  },
+  {
+    "id": 97,
+    "name": "Frank White",
+    "company": "HyperNet",
+    "email": "frank.white@hypernet.com",
+    "source": "Website",
+    "score": 65,
+    "status": "Lost"
+  },
+  {
+    "id": 98,
+    "name": "Tina Lee",
+    "company": "TechNova",
+    "email": "tina.lee@technova.com",
+    "source": "Email Campaign",
+    "score": 47,
+    "status": "Qualified"
+  },
+  {
+    "id": 99,
+    "name": "Quinn Green",
+    "company": "TechNova",
+    "email": "quinn.green@technova.com",
+    "source": "Website",
+    "score": 98,
+    "status": "Qualified"
+  },
+  {
+    "id": 100,
+    "name": "Zane Garcia",
+    "company": "DataForge",
+    "email": "zane.garcia@dataforge.com",
+    "source": "Conference",
+    "score": 62,
+    "status": "Qualified"
+  }
+]
