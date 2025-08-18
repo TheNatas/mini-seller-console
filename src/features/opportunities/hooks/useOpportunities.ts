@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import type { Opportunity, OpportunityStats, CreateOpportunityData } from '../types/opportunity';
-import { opportunityService } from '../../../services/api/opportunityService';
+import { opportunityService } from '../services';
 
 export const useOpportunities = () => {
   const [opportunities, setOpportunities] = useState<Opportunity[]>([]);

@@ -1,5 +1,5 @@
-import type { Opportunity, CreateOpportunityData } from '../../features/opportunities/types/opportunity';
-import type { ApiResponse } from '../types/api';
+import type { Opportunity } from '../types/opportunity';
+import type { ApiResponse } from '../../../services/types/api';
 
 // Simulate network delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -8,17 +8,17 @@ const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 const shouldSimulateFailure = () => Math.random() < 0.1;
 
 export const opportunityService = {
-  async createOpportunity(data: CreateOpportunityData & { leadId: number }): Promise<ApiResponse<Opportunity>> {
-    // Simulate API call delay (300-1000ms)
-    const delayTime = Math.random() * 700 + 300;
+  async createOpportunity(opportunity: Omit<Opportunity, 'id' | 'createdAt'>): Promise<ApiResponse<Opportunity>> {
+    // Simulate API call delay (500-2000ms)
+    const delayTime = Math.random() * 1500 + 500;
     await delay(delayTime);
     
     // Simulate random failures
     if (shouldSimulateFailure()) {
       return {
         data: {
+          ...opportunity,
           id: Date.now(),
-          ...data,
           createdAt: new Date(),
         },
         success: false,
@@ -29,8 +29,8 @@ export const opportunityService = {
     // Simulate successful creation
     return {
       data: {
+        ...opportunity,
         id: Date.now(),
-        ...data,
         createdAt: new Date(),
       },
       success: true,
@@ -56,7 +56,7 @@ export const opportunityService = {
   },
 
   async deleteOpportunity(opportunityId: number): Promise<ApiResponse<number>> {
-    const delayTime = Math.random() * 800 + 200;
+    const delayTime = Math.random() * 800 + 300;
     await delay(delayTime);
     
     if (shouldSimulateFailure()) {
@@ -69,6 +69,26 @@ export const opportunityService = {
     
     return {
       data: opportunityId,
+      success: true,
+    };
+  },
+
+  async getById(_opportunityId: number): Promise<ApiResponse<Opportunity | null>> {
+    const delayTime = Math.random() * 500 + 200;
+    await delay(delayTime);
+    
+    if (shouldSimulateFailure()) {
+      return {
+        data: null,
+        success: false,
+        error: 'Failed to fetch opportunity. Please try again.',
+      };
+    }
+    
+    // This would normally fetch from an API
+    // For now, we'll return null since we don't have a data store
+    return {
+      data: null,
       success: true,
     };
   },

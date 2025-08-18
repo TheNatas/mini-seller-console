@@ -1,4 +1,4 @@
-import { LeadsPage } from './pages/LeadsPage';
+import { LeadsPage } from './pages';
 
 function App() {
   return <LeadsPage />;

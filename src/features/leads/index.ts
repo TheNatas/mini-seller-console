@@ -8,5 +8,8 @@ export { LeadStats as LeadStatsComponent } from './components/LeadStats';
 export { useLeads } from './hooks/useLeads';
 export { useLeadEdit } from './hooks/useLeadEdit';
 
+// Services
+export { leadService } from './services';
+
 // Types
-export type { Lead, LeadStatus, LeadFilters, LeadStats } from './types/lead';
+export type { Lead, LeadFilters, LeadStats, LeadStatus } from './types/lead';

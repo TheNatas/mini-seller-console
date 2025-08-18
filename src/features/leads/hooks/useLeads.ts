@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
 import type { Lead, LeadFilters, LeadStats, LeadStatus } from '../types/lead';
-import { leadService } from '../../../services';
+import { leadService } from '../services';
 import leadsData from "../../../../leads.json";
 
 export const useLeads = () => {

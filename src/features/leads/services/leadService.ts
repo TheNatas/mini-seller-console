@@ -1,5 +1,5 @@
-import type { Lead } from '../../features/leads/types/lead';
-import type { ApiResponse } from '../types/api';
+import type { Lead } from '../types/lead';
+import type { ApiResponse } from '../../../services/types/api';
 
 // Simulate network delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -61,6 +61,26 @@ export const leadService = {
     
     return {
       data: { ...lead, id: Date.now() },
+      success: true,
+    };
+  },
+
+  async getById(_leadId: number): Promise<ApiResponse<Lead | null>> {
+    const delayTime = Math.random() * 500 + 200;
+    await delay(delayTime);
+    
+    if (shouldSimulateFailure()) {
+      return {
+        data: null,
+        success: false,
+        error: 'Failed to fetch lead. Please try again.',
+      };
+    }
+    
+    // This would normally fetch from an API
+    // For now, we'll return null since we don't have a data store
+    return {
+      data: null,
       success: true,
     };
   },
