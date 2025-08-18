@@ -63,9 +63,17 @@ export const useOpportunities = () => {
     });
   };
 
+  // Update opportunity with optimistic updates
+  const updateOpportunity = (updatedOpportunity: Opportunity) => {
+    setOpportunities(prev => 
+      prev.map(opp => opp.id === updatedOpportunity.id ? updatedOpportunity : opp)
+    );
+  };
+
   return {
     opportunities,
     stats,
     createOpportunity,
+    updateOpportunity,
   };
 };

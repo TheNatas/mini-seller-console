@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { useLeads } from '../../../features/leads/hooks/useLeads';
 import { useOpportunities } from '../../../features/opportunities/hooks/useOpportunities';
+import { useOpportunityEdit } from '../../../features/opportunities/hooks/useOpportunityEdit';
 import { useToast } from '../../../shared/hooks/useToast';
 import { useSlideOver } from '../../../shared/hooks/useSlideOver';
 import type { Lead } from '../../../features/leads/types/lead';
-import type { CreateOpportunityData } from '../../../features/opportunities/types/opportunity';
+import type { CreateOpportunityData, Opportunity } from '../../../features/opportunities/types/opportunity';
 
 export const useLeadsPage = () => {
   const {
@@ -19,7 +20,16 @@ export const useLeadsPage = () => {
     restoreLead,
   } = useLeads();
 
-  const { opportunities, createOpportunity } = useOpportunities();
+  const { opportunities, createOpportunity, updateOpportunity } = useOpportunities();
+
+  const {
+    isEditing: isEditingOpportunity,
+    editingOpportunity,
+    isLoading: isOpportunityLoading,
+    startEdit: startEditOpportunity,
+    cancelEdit: cancelEditOpportunity,
+    updateOpportunity: submitOpportunityUpdate,
+  } = useOpportunityEdit(updateOpportunity);
 
   const { toast, showToast, hideToast } = useToast();
   const { selectedLead, isOpen, openSlideOver, closeSlideOver } = useSlideOver();
@@ -90,6 +100,25 @@ export const useLeadsPage = () => {
     setLeadToConvert(null);
   };
 
+  // Opportunity editing handlers
+  const handleOpportunityClick = (opportunity: Opportunity) => {
+    startEditOpportunity(opportunity);
+  };
+
+  const handleOpportunityUpdate = async (updatedOpportunity: Opportunity) => {
+    const result = await submitOpportunityUpdate(updatedOpportunity);
+    
+    if (result.success) {
+      showToast('Opportunity updated successfully!', 'success');
+    } else {
+      showToast(result.error || 'Failed to update opportunity', 'error');
+    }
+  };
+
+  const handleOpportunityEditCancel = () => {
+    cancelEditOpportunity();
+  };
+
   return {
     // Data
     leads,
@@ -107,6 +136,11 @@ export const useLeadsPage = () => {
     isConvertModalOpen,
     leadToConvert,
     
+    // Opportunity editing state
+    isEditingOpportunity,
+    editingOpportunity,
+    isOpportunityLoading,
+    
     // Filter handlers
     updateFilters,
     resetFilters,
@@ -121,6 +155,11 @@ export const useLeadsPage = () => {
     handleConvertLead,
     handleConvertSubmit,
     handleConvertCancel,
+    
+    // Opportunity editing handlers
+    handleOpportunityClick,
+    handleOpportunityUpdate,
+    handleOpportunityEditCancel,
     
     // Toast handlers
     hideToast,

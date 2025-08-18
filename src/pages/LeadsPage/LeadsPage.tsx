@@ -5,6 +5,7 @@ import { LeadFilters } from '../../features/leads/components/LeadFilters';
 import { LeadTable } from '../../features/leads/components/LeadTable';
 import { OpportunityTable } from '../../features/opportunities/components/OpportunityTable';
 import { ConvertLeadForm } from '../../features/opportunities/components/ConvertLeadForm';
+import { OpportunityEditForm } from '../../features/opportunities/components/OpportunityEditForm';
 import { SlideOver } from '../../components/ui/SlideOver';
 import { Modal } from '../../components/ui/Modal';
 import { LeadEditForm } from '../../features/leads/components/LeadEditForm';
@@ -28,6 +29,11 @@ export const LeadsPage: React.FC = () => {
     isConvertModalOpen,
     leadToConvert,
     
+    // Opportunity editing state
+    isEditingOpportunity,
+    editingOpportunity,
+    isOpportunityLoading,
+    
     // Filter handlers
     updateFilters,
     resetFilters,
@@ -42,6 +48,11 @@ export const LeadsPage: React.FC = () => {
     handleConvertLead,
     handleConvertSubmit,
     handleConvertCancel,
+    
+    // Opportunity editing handlers
+    handleOpportunityClick,
+    handleOpportunityUpdate,
+    handleOpportunityEditCancel,
     
     // Toast handlers
     hideToast,
@@ -60,7 +71,10 @@ export const LeadsPage: React.FC = () => {
 
         {/* Opportunities Table */}
         <div className="mb-8">
-          <OpportunityTable opportunities={opportunities} />
+          <OpportunityTable 
+            opportunities={opportunities} 
+            onOpportunityClick={handleOpportunityClick}
+          />
         </div>
 
         {/* Statistics */}
@@ -119,6 +133,22 @@ export const LeadsPage: React.FC = () => {
               lead={leadToConvert}
               onSubmit={handleConvertSubmit}
               onCancel={handleConvertCancel}
+            />
+          )}
+        </Modal>
+
+        {/* Edit Opportunity Modal */}
+        <Modal
+          isOpen={isEditingOpportunity}
+          onClose={handleOpportunityEditCancel}
+          title="Edit Opportunity"
+        >
+          {editingOpportunity && (
+            <OpportunityEditForm
+              opportunity={editingOpportunity}
+              onSubmit={handleOpportunityUpdate}
+              onCancel={handleOpportunityEditCancel}
+              isLoading={isOpportunityLoading}
             />
           )}
         </Modal>
