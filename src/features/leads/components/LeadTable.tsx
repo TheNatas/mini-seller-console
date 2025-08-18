@@ -1,14 +1,16 @@
 import React from 'react';
 import type { Lead } from "../types/lead";
 import { Badge } from "../../../components/ui/Badge";
+import { Button } from "../../../components/ui/Button";
 
 interface LeadTableProps {
   leads: Lead[];
   onLeadClick?: (lead: Lead) => void;
+  onConvertLead?: (lead: Lead) => void;
   isLoading?: boolean;
 }
 
-export const LeadTable: React.FC<LeadTableProps> = ({ leads, onLeadClick, isLoading = false }) => {
+export const LeadTable: React.FC<LeadTableProps> = ({ leads, onLeadClick, onConvertLead, isLoading = false }) => {
   if (isLoading) {
     return (
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
@@ -67,6 +69,9 @@ export const LeadTable: React.FC<LeadTableProps> = ({ leads, onLeadClick, isLoad
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Status
               </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Actions
+              </th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
@@ -109,6 +114,18 @@ export const LeadTable: React.FC<LeadTableProps> = ({ leads, onLeadClick, isLoad
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
                   <Badge status={lead.status} />
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  <Button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onConvertLead?.(lead);
+                    }}
+                    variant="secondary"
+                    size="sm"
+                  >
+                    Convert Lead
+                  </Button>
                 </td>
               </tr>
             ))}

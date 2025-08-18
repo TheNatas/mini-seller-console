@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLeads } from '../features/leads/hooks/useLeads';
+import { useOpportunities } from '../features/opportunities/hooks/useOpportunities';
 import { useToast } from '../shared/hooks/useToast';
 import { useSlideOver } from '../shared/hooks/useSlideOver';
 import { LeadStats } from '../features/leads/components/LeadStats';
 import { LeadFilters } from '../features/leads/components/LeadFilters';
 import { LeadTable } from '../features/leads/components/LeadTable';
+import { OpportunityTable } from '../features/opportunities/components/OpportunityTable';
+import { ConvertLeadForm } from '../features/opportunities/components/ConvertLeadForm';
 import { SlideOver } from '../components/ui/SlideOver';
+import { Modal } from '../components/ui/Modal';
 import { LeadEditForm } from '../features/leads/components/LeadEditForm';
 import { Toast } from '../components/ui/Toast';
 import type { Lead } from '../features/leads/types/lead';
+import type { CreateOpportunityData } from '../features/opportunities/types/opportunity';
 
 export const LeadsPage: React.FC = () => {
   const {
@@ -19,10 +24,17 @@ export const LeadsPage: React.FC = () => {
     updateFilters,
     resetFilters,
     updateLead,
+    removeLead,
+    restoreLead,
   } = useLeads();
+
+  const { opportunities, createOpportunity } = useOpportunities();
 
   const { toast, showToast, hideToast } = useToast();
   const { selectedLead, isOpen, openSlideOver, closeSlideOver } = useSlideOver();
+  
+  const [isConvertModalOpen, setIsConvertModalOpen] = useState(false);
+  const [leadToConvert, setLeadToConvert] = useState<Lead | null>(null);
 
   const handleLeadClick = (lead: Lead) => {
     openSlideOver(lead);
@@ -49,6 +61,42 @@ export const LeadsPage: React.FC = () => {
     closeSlideOver();
   };
 
+  const handleConvertLead = (lead: Lead) => {
+    setLeadToConvert(lead);
+    setIsConvertModalOpen(true);
+  };
+
+  const handleConvertSubmit = (data: CreateOpportunityData) => {
+    if (!leadToConvert) return;
+
+    // Optimistically remove the lead immediately
+    removeLead(leadToConvert.id);
+    setIsConvertModalOpen(false);
+    
+    // Store lead data in case we need to restore it
+    const leadToRestore = leadToConvert;
+    setLeadToConvert(null);
+
+    createOpportunity(
+      { ...data, leadId: leadToRestore.id },
+      // Success callback
+      () => {
+        showToast('Lead converted to opportunity successfully!', 'success');
+      },
+      // Error callback - restore the lead
+      (error: string) => {
+        // Restore the lead if opportunity creation failed
+        restoreLead(leadToRestore);
+        showToast(error, 'error');
+      }
+    );
+  };
+
+  const handleConvertCancel = () => {
+    setIsConvertModalOpen(false);
+    setLeadToConvert(null);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -58,6 +106,11 @@ export const LeadsPage: React.FC = () => {
           <p className="text-gray-600">
             Manage and track your leads with advanced filtering and sorting capabilities.
           </p>
+        </div>
+
+        {/* Opportunities Table */}
+        <div className="mb-8">
+          <OpportunityTable opportunities={opportunities} />
         </div>
 
         {/* Statistics */}
@@ -84,7 +137,11 @@ export const LeadsPage: React.FC = () => {
         </div>
 
         {/* Leads Table */}
-        <LeadTable leads={leads} onLeadClick={handleLeadClick} />
+        <LeadTable 
+          leads={leads} 
+          onLeadClick={handleLeadClick} 
+          onConvertLead={handleConvertLead}
+        />
 
         {/* Slide-over for editing */}
         <SlideOver
@@ -100,6 +157,21 @@ export const LeadsPage: React.FC = () => {
             />
           )}
         </SlideOver>
+
+        {/* Convert Lead Modal */}
+        <Modal
+          isOpen={isConvertModalOpen}
+          onClose={handleConvertCancel}
+          title="Convert Lead to Opportunity"
+        >
+          {leadToConvert && (
+            <ConvertLeadForm
+              lead={leadToConvert}
+              onSubmit={handleConvertSubmit}
+              onCancel={handleConvertCancel}
+            />
+          )}
+        </Modal>
 
         {/* Toast notifications */}
         <Toast

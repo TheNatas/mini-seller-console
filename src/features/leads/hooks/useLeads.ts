@@ -149,6 +149,16 @@ export const useLeads = () => {
     });
   };
 
+  // Remove lead when converted to opportunity
+  const removeLead = (leadId: number) => {
+    setLeads((prevLeads) => prevLeads.filter(lead => lead.id !== leadId));
+  };
+
+  // Restore lead if conversion fails
+  const restoreLead = (lead: Lead) => {
+    setLeads((prevLeads) => [...prevLeads, lead]);
+  };
+
   return {
     leads: filteredLeads,
     allLeads: leads,
@@ -158,5 +168,7 @@ export const useLeads = () => {
     updateFilters,
     resetFilters,
     updateLead,
+    removeLead,
+    restoreLead,
   };
 };
